@@ -30,9 +30,14 @@ Mixed: first-time homebuyers, refinancers/current homeowners, and VA loan borrow
 ## Caption format
 - Hook line (question or bold statement)
 - 2-4 short paragraphs or bullet points of value
-- CTA (varies by content type — "Save this for later", "DM us your questions", "Link in bio to get pre-approved")
+- CTA (varies by content type — "Save this for later", "DM us your questions", "🔗 Link in bio to get pre-approved", "📞 Tap Call to talk through your options")
 - Hashtags (5-8)
 - Disclosure line at the very end
+
+## Contact CTAs
+The Instagram profile has a clickable website link (www.shanevanderleeliefairwaymc.com) and a "Call" button ((813)-245-2068). Reference these in CTAs instead of writing out raw URLs/numbers in the caption (Instagram captions don't make links or phone numbers clickable):
+- "🔗 Link in bio" — for pre-approval, consultations, learning more
+- "📞 Tap the Call button on our profile" — for direct questions, eligibility checks
 
 ## Posting cadence
 1-2 times per day (morning and evening), rotating through the content mix.
