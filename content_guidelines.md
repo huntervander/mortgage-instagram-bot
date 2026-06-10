@@ -35,4 +35,4 @@ Mixed: first-time homebuyers, refinancers/current homeowners, and VA loan borrow
 - Disclosure line at the very end
 
 ## Posting cadence
-Every 2-3 days (not daily) to maintain quality and avoid burnout on content variety.
+1-2 times per day (morning and evening), rotating through the content mix.
