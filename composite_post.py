@@ -20,7 +20,7 @@ LOGO_PATH = ASSETS_DIR / "fairway_logo.jpg"
 
 NAME_TEXT = "Shane Vanderleelie"
 ROLE_TEXT = "Mortgage Loan Officer"
-NMLS_TEXT = "NMLS #2682924"
+NMLS_TEXT = "NMLS #2682924 | (813) 245-2068"
 COMPLIANCE_TEXT = "© Copyright 2026 Fairway Independent Mortgage Corporation | NMLS Entity ID #2289 |"
 
 FOOTER_HEIGHT_RATIO = 0.19  # total footer height (main row + compliance strip) as a fraction of image width
