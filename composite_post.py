@@ -19,9 +19,12 @@ HEADSHOT_PATH = ASSETS_DIR / "shane_headshot.png"
 LOGO_PATH = ASSETS_DIR / "fairway_logo.jpg"
 
 NAME_TEXT = "Shane Vanderleelie"
+ROLE_TEXT = "Mortgage Loan Officer"
 NMLS_TEXT = "NMLS #2682924"
+COMPLIANCE_TEXT = "© Copyright 2026 Fairway Independent Mortgage Corporation | NMLS Entity ID #2289 |"
 
-FOOTER_HEIGHT_RATIO = 0.14  # footer bar height as a fraction of image width
+FOOTER_HEIGHT_RATIO = 0.19  # total footer height (main row + compliance strip) as a fraction of image width
+COMPLIANCE_ROW_RATIO = 0.26  # portion of the footer height used by the compliance strip
 
 
 def load_font(size: int) -> ImageFont.FreeTypeFont:
@@ -64,17 +67,20 @@ def composite(background_path_or_url: str, output_path: Path) -> None:
 
     w, h = bg.size
     footer_h = int(w * FOOTER_HEIGHT_RATIO)
+    compliance_h = int(footer_h * COMPLIANCE_ROW_RATIO)
+    main_h = footer_h - compliance_h
 
-    # Extend canvas downward and draw a dark footer bar
+    # Extend canvas downward and draw the footer bars
     canvas = Image.new("RGBA", (w, h + footer_h), (255, 255, 255, 255))
     canvas.paste(bg, (0, 0))
 
     draw = ImageDraw.Draw(canvas)
-    draw.rectangle((0, h, w, h + footer_h), fill=(20, 30, 48, 255))  # dark navy bar
+    draw.rectangle((0, h, w, h + main_h), fill=(20, 30, 48, 255))  # dark navy bar
+    draw.rectangle((0, h + main_h, w, h + footer_h), fill=(12, 18, 30, 255))  # darker compliance strip
 
     # Headshot circle on the left
-    margin = int(footer_h * 0.12)
-    circle_size = footer_h - 2 * margin
+    margin = int(main_h * 0.12)
+    circle_size = main_h - 2 * margin
     headshot = make_circle(Image.open(HEADSHOT_PATH), circle_size)
     headshot_pos = (margin, h + margin)
     canvas.paste(headshot, headshot_pos, headshot)
@@ -87,23 +93,41 @@ def composite(background_path_or_url: str, output_path: Path) -> None:
         outline=(255, 255, 255, 255), width=3,
     )
 
-    # Name + NMLS text next to headshot
+    # Name + role + NMLS text next to headshot
     text_x = headshot_pos[0] + circle_size + margin
-    name_font = load_font(int(footer_h * 0.28))
-    nmls_font = load_font(int(footer_h * 0.18))
+    name_font = load_font(int(main_h * 0.24))
+    role_font = load_font(int(main_h * 0.16))
+    nmls_font = load_font(int(main_h * 0.16))
 
-    name_y = h + margin + int(footer_h * 0.05)
-    nmls_y = name_y + int(footer_h * 0.36)
+    name_y = h + int(main_h * 0.10)
+    role_y = name_y + int(main_h * 0.30)
+    nmls_y = role_y + int(main_h * 0.26)
 
     draw.text((text_x, name_y), NAME_TEXT, fill=(255, 255, 255, 255), font=name_font)
+    draw.text((text_x, role_y), ROLE_TEXT, fill=(218, 165, 32, 255), font=role_font)  # gold accent
     draw.text((text_x, nmls_y), NMLS_TEXT, fill=(200, 200, 200, 255), font=nmls_font)
 
     # Fairway logo on the right
     logo = Image.open(LOGO_PATH).convert("RGBA")
-    logo_size = footer_h - 2 * margin
+    logo_size = main_h - 2 * margin
     logo = logo.resize((logo_size, logo_size), Image.LANCZOS)
     logo_pos = (w - margin - logo_size, h + margin)
     canvas.paste(logo, logo_pos, logo)
+
+    # Compliance strip text, centered, shrink-to-fit within the image width
+    max_text_w = int(w * 0.96)
+    font_size = int(compliance_h * 0.42)
+    compliance_font = load_font(font_size)
+    text_bbox = draw.textbbox((0, 0), COMPLIANCE_TEXT, font=compliance_font)
+    while (text_bbox[2] - text_bbox[0]) > max_text_w and font_size > 6:
+        font_size -= 1
+        compliance_font = load_font(font_size)
+        text_bbox = draw.textbbox((0, 0), COMPLIANCE_TEXT, font=compliance_font)
+    text_w = text_bbox[2] - text_bbox[0]
+    text_h = text_bbox[3] - text_bbox[1]
+    compliance_x = (w - text_w) // 2
+    compliance_y = h + main_h + (compliance_h - text_h) // 2 - text_bbox[1]
+    draw.text((compliance_x, compliance_y), COMPLIANCE_TEXT, fill=(170, 170, 170, 255), font=compliance_font)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     canvas.convert("RGB").save(output_path, "PNG")
