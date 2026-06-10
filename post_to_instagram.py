@@ -67,9 +67,17 @@ def publish_media(ig_user_id: str, token: str, container_id: str) -> str:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--image-url", required=True, help="Publicly accessible image URL")
-    parser.add_argument("--caption", required=True, help="Post caption")
+    parser.add_argument("--caption", help="Post caption")
+    parser.add_argument("--caption-file", help="Path to a text file containing the caption")
     parser.add_argument("--dry-run", action="store_true", help="Create container but do not publish")
     args = parser.parse_args()
+
+    if args.caption_file:
+        caption = Path(args.caption_file).read_text(encoding="utf-8")
+    elif args.caption:
+        caption = args.caption
+    else:
+        parser.error("one of --caption or --caption-file is required")
 
     env_path = Path(__file__).parent / ".env"
     env = load_env(env_path)
@@ -77,7 +85,7 @@ def main():
     token = env["IG_ACCESS_TOKEN"]
 
     print("Creating media container...")
-    container_id = create_media_container(ig_user_id, token, args.image_url, args.caption)
+    container_id = create_media_container(ig_user_id, token, args.image_url, caption)
     print(f"Container created: {container_id}")
 
     print("Waiting for container to finish processing...")
