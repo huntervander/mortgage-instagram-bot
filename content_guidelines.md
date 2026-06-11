@@ -14,6 +14,9 @@ Mixed: first-time homebuyers, refinancers/current homeowners, and VA loan borrow
 2. **Market updates** (~25%) — current mortgage rate trends, Florida housing market commentary. Always frame rates as "as of [date]" and "subject to change" — never imply a guaranteed/locked rate in a social post.
 3. **Promotional / CTA** (~25%) — "Get pre-approved", "Reach out for a free consultation", VA loan eligibility checks. Must include compliance disclaimer (see below).
 
+### VA angle (woven in, not dominant)
+About 1 in every 3-4 posts (across any of the categories above) should lean into VA loan content, since this is a veteran-owned business — e.g., VA myth-busters ("you don't need 20% down"), VA benefit breakdowns (no PMI, funding fee waivers for disability ratings), VA eligibility basics. The rest of the rotation should stay general-audience (FHA/Conventional/USDA, credit, refinancing, market updates) so non-veteran homebuyers and refinancers stay equally well served. Avoid specific payment/dollar examples (e.g., "$2,040/month") and specific close-time promises ("21-30 days") in auto-generated posts — those need Shane/compliance review before use.
+
 ## Required disclosures
 - Every post: include `NMLS #2682924` somewhere in the caption (can be small/at the end).
 - Promotional posts: add "This is not a commitment to lend. Terms and programs subject to change without notice. Equal Housing Opportunity." (shortened forms acceptable, e.g. "Equal Housing Lender. NMLS #2682924. Not a commitment to lend.")
