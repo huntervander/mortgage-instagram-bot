@@ -17,6 +17,7 @@ from PIL import Image, ImageDraw, ImageFont
 ASSETS_DIR = Path(__file__).parent / "assets"
 HEADSHOT_PATH = ASSETS_DIR / "shane_headshot.png"
 LOGO_PATH = ASSETS_DIR / "fairway_logo.jpg"
+VETERAN_BADGE_PATH = ASSETS_DIR / "veteran_badge.png"
 
 NAME_TEXT = "Shane Vanderleelie"
 ROLE_TEXT = "Mortgage Loan Officer"
@@ -73,6 +74,14 @@ def composite(background_path_or_url: str, output_path: Path) -> None:
     # Extend canvas downward and draw the footer bars
     canvas = Image.new("RGBA", (w, h + footer_h), (255, 255, 255, 255))
     canvas.paste(bg, (0, 0))
+
+    # Veteran-owned badge in the top-right corner of the main image
+    if VETERAN_BADGE_PATH.exists():
+        badge_size = int(w * 0.16)
+        badge = Image.open(VETERAN_BADGE_PATH).convert("RGBA").resize((badge_size, badge_size), Image.LANCZOS)
+        badge_margin = int(w * 0.03)
+        badge_pos = (w - badge_margin - badge_size, badge_margin)
+        canvas.paste(badge, badge_pos, badge)
 
     draw = ImageDraw.Draw(canvas)
     draw.rectangle((0, h, w, h + main_h), fill=(20, 30, 48, 255))  # dark navy bar

@@ -4,6 +4,7 @@
 - NMLS #2682924
 - Licensed in: Florida
 - Equal Housing Lender (always include the Equal Housing Opportunity statement/logo on promotional graphics)
+- Veteran-owned and operated — every post image includes a "Veteran Owned and Operated" badge (added automatically by composite_post.py). Captions can occasionally reference this (e.g., "proud to be a veteran-owned business"), especially alongside VA loan content, but must not imply VA or government endorsement.
 
 ## Audience
 Mixed: first-time homebuyers, refinancers/current homeowners, and VA loan borrowers/veterans. General homebuying education appeals to all of these.
@@ -25,7 +26,7 @@ Mixed: first-time homebuyers, refinancers/current homeowners, and VA loan borrow
 - Local Florida flavor where relevant (e.g., referencing Florida-specific programs like the Florida Hometown Heroes program, Florida Housing first-time buyer programs).
 
 ## Hashtag suggestions
-#FloridaMortgage #FirstTimeHomeBuyer #VALoan #HomeLoanTips #MortgageBroker #FloridaRealEstate #RefinanceYourHome #HomeBuyingTips
+#FloridaMortgage #FirstTimeHomeBuyer #VALoan #HomeLoanTips #MortgageBroker #FloridaRealEstate #RefinanceYourHome #HomeBuyingTips #VeteranOwned
 
 ## Caption format
 - Hook line (question or bold statement)
@@ -41,3 +42,11 @@ The Instagram profile has a clickable website link (www.shanevanderleeliefairway
 
 ## Posting cadence
 1-2 times per day (morning and evening), rotating through the content mix.
+
+## Reels (video posts)
+- Vertical 9:16 aspect ratio, 15-30 seconds.
+- Hook in the first 3 seconds (on-screen text + caption hook line).
+- Use on-screen text overlays to reinforce key points (many viewers watch muted).
+- Same content mix and disclosure rules as feed posts apply.
+- `post_to_instagram.py` supports `--video-url` to publish as a Reel (uses `media_type=REELS`).
+- Note: composite_post.py currently only brands static images. Reels need to be reviewed for branding/disclosures manually until a video-branding step is added.
