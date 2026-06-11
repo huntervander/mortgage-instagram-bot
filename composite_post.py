@@ -17,7 +17,7 @@ from PIL import Image, ImageDraw, ImageFont
 ASSETS_DIR = Path(__file__).parent / "assets"
 HEADSHOT_PATH = ASSETS_DIR / "shane_headshot.png"
 LOGO_PATH = ASSETS_DIR / "fairway_logo.jpg"
-VETERAN_BADGE_PATH = ASSETS_DIR / "veteran_badge.png"
+VETERAN_BADGE_PATH = ASSETS_DIR / "veteran-owned-operated.png"
 
 NAME_TEXT = "Shane Vanderleelie"
 ROLE_TEXT = "Mortgage Loan Officer"
