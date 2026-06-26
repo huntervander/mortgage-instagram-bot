@@ -1,0 +1,8 @@
+{
+  "content_type": "market_update",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_027/image.png",
+  "higgsfield_source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260626_230412_1113bd66-559e-469b-a851-9a87cab3a50e.png",
+  "generated_at": "2026-06-26T23:04:12Z",
+  "image_status": "pending_composite",
+  "image_note": "composite_post.py could not download the Higgsfield background — d8j0ntlcm91z4.cloudfront.net is blocked by the session egress proxy policy. Run: python composite_post.py --background-url <higgsfield_source_url> --output pending/draft_027/image.png locally to complete this draft."
+}
