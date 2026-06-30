@@ -1,0 +1,7 @@
+{
+  "content_type": "market_update",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_035/image.png",
+  "higgsfield_background_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260630_230607_bba5f866-f159-4382-ba6b-072ddf57cfd6.png",
+  "generated_at": "2026-06-30T23:07:12Z",
+  "note": "Background is a synthetic navy/gold gradient (PIL-generated fallback). The Higgsfield AI background URL is preserved above — CloudFront CDN (d8j0ntlcm91z4.cloudfront.net) was blocked by the egress proxy during this run. To swap in the AI background: download higgsfield_background_url manually and re-run: python composite_post.py --background-url <local_path> --output pending/draft_035/image.png, then recommit."
+}
