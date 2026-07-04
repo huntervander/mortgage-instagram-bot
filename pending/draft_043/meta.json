@@ -1,0 +1,7 @@
+{
+  "content_type": "market_update",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_043/image.png",
+  "higgsfield_background_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260704_230610_1a8f2a39-e341-4b6b-bbe1-b266bc88e8bd.png",
+  "generated_at": "2026-07-04T23:07:00Z",
+  "note": "Higgsfield CDN (d8j0ntlcm91z4.cloudfront.net) is blocked by proxy egress policy. image.png uses a programmatic fallback background. To upgrade: download higgsfield_background_url manually and re-run: python composite_post.py --background-url <local-path> --output pending/draft_043/image.png"
+}
