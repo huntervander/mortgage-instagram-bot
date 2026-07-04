@@ -1,0 +1,7 @@
+{
+  "content_type": "educational",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_042/image.png",
+  "generated_at": "2026-07-04T13:06:13Z",
+  "higgsfield_background_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260704_130613_57711db4-a91d-4a2a-a01b-191f409c325c.png",
+  "image_note": "Background is a local placeholder — Higgsfield CDN (d8j0ntlcm91z4.cloudfront.net) was blocked by egress proxy policy. Re-run: python composite_post.py --background-url \"<higgsfield_background_url>\" --output pending/draft_042/image.png then recommit image.png."
+}
