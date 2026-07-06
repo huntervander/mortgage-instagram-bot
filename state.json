@@ -1,5 +1,10 @@
 {
-  "post_count": 45,
+  "post_count": 46,
   "last_content_type": "educational",
-  "content_type_rotation": ["educational", "educational", "market_update", "promotional"]
+  "content_type_rotation": [
+    "educational",
+    "educational",
+    "market_update",
+    "promotional"
+  ]
 }
