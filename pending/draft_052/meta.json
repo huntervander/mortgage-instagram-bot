@@ -1,0 +1,7 @@
+{
+  "content_type": "promotional",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_052/image.png",
+  "higgsfield_bg_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260709_130702_e11ea2f9-4915-4f00-8043-5d31bdc016a2.png",
+  "generated_at": "2026-07-09T13:07:02Z",
+  "composite_status": "pending_manual - CloudFront CDN blocked by egress proxy; run: python composite_post.py --background-url https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260709_130702_e11ea2f9-4915-4f00-8043-5d31bdc016a2.png --output pending/draft_052/image.png"
+}
