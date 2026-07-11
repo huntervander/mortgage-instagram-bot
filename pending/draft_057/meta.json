@@ -1,0 +1,6 @@
+{
+  "content_type": "educational",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_057/image.png",
+  "generated_at": "2026-07-11T23:06:00Z",
+  "notes": "Higgsfield background (job ac26cf29-0162-4a14-a468-14df00556082, URL: https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260711_230553_ac26cf29-0162-4a14-a468-14df00556082.png) could not be downloaded from the shell due to egress policy blocking d8j0ntlcm91z4.cloudfront.net. A navy/gold Pillow-generated fallback background was used instead. To retry with the Higgsfield image, add d8j0ntlcm91z4.cloudfront.net to the session egress allowlist."
+}
