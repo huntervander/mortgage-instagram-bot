@@ -1,0 +1,7 @@
+{
+  "content_type": "promotional",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_060/image.png",
+  "generated_at": "2026-07-13T13:07:09Z",
+  "higgsfield_image_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260713_130709_b696a6e5-d889-4d04-9e9b-55e866cd8545.png",
+  "note": "Higgsfield CDN (d8j0ntlcm91z4.cloudfront.net) is blocked by network egress policy. Branded composite image uses a fallback navy gradient background instead of the AI-generated background. To use the original Higgsfield image, add the CDN host to the network egress allowlist."
+}
