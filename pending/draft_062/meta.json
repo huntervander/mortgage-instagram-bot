@@ -1,0 +1,7 @@
+{
+  "content_type": "educational",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_062/image.png",
+  "higgsfield_bg_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260714_130641_8031ebe4-e77b-4f8d-96df-ef6558cd61db.png",
+  "generated_at": "2026-07-14T13:06:41Z",
+  "note": "Higgsfield background generated (higgsfield_bg_url) but CDN unreachable from container — image.png uses a navy gradient placeholder. Re-run composite_post.py with higgsfield_bg_url once accessible, or regenerate via Higgsfield."
+}
