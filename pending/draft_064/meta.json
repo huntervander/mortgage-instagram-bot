@@ -1,0 +1,7 @@
+{
+  "content_type": "promotional",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_064/image.png",
+  "higgsfield_image_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260715_130614_1dfe0575-3705-4168-9685-631372ebd564.png",
+  "generated_at": "2026-07-15T13:06:14Z",
+  "note": "Higgsfield CDN (d8j0ntlcm91z4.cloudfront.net) is blocked by the session egress policy. Background was rendered locally using Pillow as a fallback. The Higgsfield-generated image URL is preserved above for reference. Add d8j0ntlcm91z4.cloudfront.net to the network egress allowlist to enable direct compositing in future runs."
+}
