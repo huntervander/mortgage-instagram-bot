@@ -1,0 +1,6 @@
+{
+  "content_type": "promotional",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_068/image.png",
+  "generated_at": "2026-07-17T23:11:04Z",
+  "notes": "Background is a placeholder gradient. The Higgsfield-generated background (https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260717_230555_ee1a6a23-84ea-48af-bf29-932388c263b5.png) could not be composited in this run because the Higgsfield CDN (d8j0ntlcm91z4.cloudfront.net) is blocked by the egress proxy policy. To use the real AI background, download that URL locally and re-run: python composite_post.py --background-url <local_path> --output pending/draft_068/image.png"
+}
