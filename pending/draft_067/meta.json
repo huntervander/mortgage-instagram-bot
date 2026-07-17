@@ -1,0 +1,7 @@
+{
+  "content_type": "market_update",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_067/image.png",
+  "higgsfield_image_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260717_130623_4c8a5b41-476d-43e1-b119-0bd8aa89d080.png",
+  "generated_at": "2026-07-17T13:10:00Z",
+  "note": "AI background (higgsfield_image_url) could not be fetched during compositing — Higgsfield CDN (d8j0ntlcm91z4.cloudfront.net) is blocked by proxy policy. A navy gradient fallback background was used instead. Re-run composite_post.py manually with the higgsfield_image_url on a machine with unrestricted access to produce the final composited image."
+}
