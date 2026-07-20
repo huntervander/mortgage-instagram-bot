@@ -1,0 +1,7 @@
+{
+  "content_type": "educational",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_073/image.png",
+  "generated_at": "2026-07-20T13:08:09Z",
+  "higgsfield_background_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260720_130809_51621dc6-b662-4464-abef-c07372f6135a.png",
+  "background_note": "AI background generation succeeded (Higgsfield job 51621dc6-b662-4464-abef-c07372f6135a) but CDN host d8j0ntlcm91z4.cloudfront.net is blocked by egress policy. A synthetic Pillow-generated background was used instead. To use the AI background, download the higgsfield_background_url manually and re-run composite_post.py."
+}
