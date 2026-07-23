@@ -1,0 +1,77 @@
+name: Create Mortgage Instagram Draft
+on:
+  workflow_dispatch:
+    inputs:
+      draft_number:
+        description: 'Draft number (zero-padded, e.g. 080)'
+        required: true
+      background_url:
+        description: 'Higgsfield background image URL'
+        required: true
+      content_type:
+        description: 'Content type (e.g. promotional)'
+        required: true
+      caption_b64:
+        description: 'Caption text (base64 encoded)'
+        required: true
+      meta_b64:
+        description: 'meta.json content (base64 encoded)'
+        required: true
+      state_b64:
+        description: 'Updated state.json (base64 encoded)'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  create-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Create draft directory
+        run: mkdir -p "pending/draft_${{ inputs.draft_number }}"
+
+      - name: Write caption.txt
+        env:
+          CAPTION_B64: ${{ inputs.caption_b64 }}
+          DRAFT_NUM: ${{ inputs.draft_number }}
+        run: python3 -c "import base64,os; open(f'pending/draft_{os.environ[\"DRAFT_NUM\"]}/caption.txt','wb').write(base64.b64decode(os.environ['CAPTION_B64']))"
+
+      - name: Generate composited image
+        env:
+          BACKGROUND_URL: ${{ inputs.background_url }}
+          DRAFT_NUM: ${{ inputs.draft_number }}
+        run: |
+          python composite_post.py \
+            --background-url "$BACKGROUND_URL" \
+            --output "pending/draft_${DRAFT_NUM}/image.png"
+
+      - name: Write meta.json
+        env:
+          META_B64: ${{ inputs.meta_b64 }}
+          DRAFT_NUM: ${{ inputs.draft_number }}
+        run: python3 -c "import base64,os; open(f'pending/draft_{os.environ[\"DRAFT_NUM\"]}/meta.json','wb').write(base64.b64decode(os.environ['META_B64']))"
+
+      - name: Update state.json
+        env:
+          STATE_B64: ${{ inputs.state_b64 }}
+        run: python3 -c "import base64,os; open('state.json','wb').write(base64.b64decode(os.environ['STATE_B64']))"
+
+      - name: Commit and push
+        env:
+          DRAFT_NUM: ${{ inputs.draft_number }}
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions@github.com"
+          git add "pending/draft_${DRAFT_NUM}/" state.json
+          git commit -m "Add draft post draft_${DRAFT_NUM}"
+          git push
