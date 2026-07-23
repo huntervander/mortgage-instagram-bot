@@ -1,0 +1,6 @@
+{
+  "content_type": "market_update",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_079/image.png",
+  "generated_at": "2026-07-23T13:08:16Z",
+  "notes": "AI background from Higgsfield (job 78cc1967-60a9-4bdf-847d-1bb400d20cc4) could not be composited — CloudFront CDN domain (d8j0ntlcm91z4.cloudfront.net) is policy-blocked in this environment. image.png uses a solid placeholder background with full branding overlay applied. To apply the real AI background, run: python composite_post.py --background-url \"https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260723_130816_78cc1967-60a9-4bdf-847d-1bb400d20cc4.png\" --output \"pending/draft_079/image.png\""
+}
