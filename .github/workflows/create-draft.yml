@@ -1,0 +1,58 @@
+name: Create Draft Post
+on:
+  workflow_dispatch:
+    inputs:
+      background_url:
+        description: 'Background image URL'
+        required: true
+      draft_number:
+        description: 'Draft number (e.g., 089)'
+        required: true
+      caption_b64:
+        description: 'Base64-encoded caption content'
+        required: true
+      meta_b64:
+        description: 'Base64-encoded meta.json content'
+        required: true
+      state_b64:
+        description: 'Base64-encoded state.json content'
+        required: true
+
+jobs:
+  create-draft:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Python dependencies
+        run: pip install Pillow requests
+
+      - name: Composite image
+        run: |
+          mkdir -p "pending/draft_${{ inputs.draft_number }}"
+          python composite_post.py \
+            --background-url "${{ inputs.background_url }}" \
+            --output "pending/draft_${{ inputs.draft_number }}/image.png"
+
+      - name: Write draft files
+        env:
+          CAPTION_B64: ${{ inputs.caption_b64 }}
+          META_B64: ${{ inputs.meta_b64 }}
+          STATE_B64: ${{ inputs.state_b64 }}
+          DRAFT: ${{ inputs.draft_number }}
+        run: |
+          printf '%s' "$CAPTION_B64" | base64 -d > "pending/draft_${DRAFT}/caption.txt"
+          printf '%s' "$META_B64" | base64 -d > "pending/draft_${DRAFT}/meta.json"
+          printf '%s' "$STATE_B64" | base64 -d > state.json
+
+      - name: Commit and push
+        env:
+          DRAFT: ${{ inputs.draft_number }}
+        run: |
+          git config user.email "instagram-bot@shanevanderleelie.com"
+          git config user.name "Instagram Bot"
+          git add "pending/draft_${DRAFT}/" state.json
+          git commit -m "Add draft post draft_${DRAFT}"
+          git push
