@@ -1,0 +1,7 @@
+{
+  "draft_id": "draft_092",
+  "content_type": "promotional",
+  "generated_at": "2026-07-30",
+  "raw_background_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260730_130701_1e4ac7b9-742f-4662-91ca-44f040248f6d.png",
+  "image_note": "Run: python composite_post.py --background-url '<raw_background_url>' --output pending/draft_092/image.png"
+}
