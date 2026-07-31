@@ -1,0 +1,10 @@
+{
+  "draft_id": "draft_094",
+  "content_type": "educational",
+  "topic": "FHA vs. Conventional Loans",
+  "generated_at": "2026-07-31",
+  "raw_background_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260731_130559_642a5093-3e32-40c5-9c34-636fa1f657c5.png",
+  "composited_image_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/a55120b7-8657-4ebc-93af-14e3dba9b7c4.jpg",
+  "composited_image_note": "Full-resolution branded composite (1024x1024 + footer, JPEG quality 85, ~278KB). Accessible directly in browser. To produce image.png locally: python composite_post.py --background-url <raw_background_url> --output pending/draft_094/image.png",
+  "status": "pending_review"
+}
