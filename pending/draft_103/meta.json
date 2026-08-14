@@ -1,6 +1,7 @@
 {
   "content_type": "market_update",
   "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_103/image.png",
-  "generated_at": "2026-08-07T00:00:00Z",
-  "image_status": "pending — Higgsfield account has 0 credits; re-run after topping up to generate image.png and finalize this draft"
+  "generated_at": "2026-08-10T23:16:00Z",
+  "higgsfield_job_id": "22259431-c145-40e1-bf9d-be689cd712ce",
+  "note": "Higgsfield background generated (job 22259431) but CloudFront CDN blocked by egress policy. Local Pillow background used for compositing. Branding added via composite_post.py."
 }

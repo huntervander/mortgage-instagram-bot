@@ -1,0 +1,42 @@
+name: Generate Composite Image
+
+on:
+  workflow_dispatch:
+    inputs:
+      background_url:
+        description: 'Background image URL'
+        required: true
+      output_path:
+        description: 'Output path for composite image (e.g. pending/draft_107/image.png)'
+        required: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install Pillow requests
+
+      - name: Generate composite
+        run: |
+          python composite_post.py \
+            --background-url "${{ inputs.background_url }}" \
+            --output "${{ inputs.output_path }}"
+
+      - name: Commit image
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${{ inputs.output_path }}"
+          git diff --staged --quiet || git commit -m "Add composite image: ${{ inputs.output_path }}"
+          git push

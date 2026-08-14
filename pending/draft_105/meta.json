@@ -1,0 +1,8 @@
+{
+  "content_type": "educational",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_105/image.png",
+  "higgsfield_job_id": "ee2b134a-62fe-44e7-be93-693e96726ebc",
+  "raw_background_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260811_230631_ee2b134a-62fe-44e7-be93-693e96726ebc.png",
+  "generated_at": "2026-08-11",
+  "note": "Higgsfield background generated (job ee2b134a) but CloudFront CDN blocked by egress policy. Local Pillow background used for compositing. Branding added via composite_post.py."
+}
