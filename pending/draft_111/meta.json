@@ -1,0 +1,7 @@
+{
+  "content_type": "market_update",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_111/image.png",
+  "higgsfield_raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260814_230615_6e38a90a-aacc-492d-9827-0c0acd29b06b.png",
+  "generated_at": "2026-08-14T23:06:15Z",
+  "composite_status": "FAILED — CloudFront host blocked by egress proxy policy. Run: python composite_post.py --background-url \"<higgsfield_raw_url>\" --output pending/draft_111/image.png from a machine with full internet access."
+}
