@@ -1,0 +1,8 @@
+{
+  "content_type": "educational",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_113/image.png",
+  "higgsfield_raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260816_130926_78005f14-c4bc-4c0d-8745-b734d41bd664.png",
+  "generated_at": "2026-08-16T13:09:26Z",
+  "composite_status": "PARTIAL — AI background (higgsfield_raw_url) blocked by egress proxy; placeholder gradient background used instead. Re-run: python composite_post.py --background-url \"<higgsfield_raw_url>\" --output pending/draft_113/image.png from a machine with full internet access to apply the AI-generated background.",
+  "topic": "down_payment_myths"
+}
