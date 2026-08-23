@@ -1,0 +1,8 @@
+{
+  "content_type": "educational",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_124/image.png",
+  "higgsfield_image_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260823_130737_7ec8a6c5-be1b-415f-899b-94d1c1d68754.png",
+  "higgsfield_job_id": "7ec8a6c5-be1b-415f-899b-94d1c1d68754",
+  "generated_at": "2026-08-23T13:07:37Z",
+  "image_status": "NEEDS_COMPOSITE — Higgsfield CDN (d8j0ntlcm91z4.cloudfront.net) is blocked by session proxy policy. Run composite_post.py locally using higgsfield_image_url as --background-url to produce image.png."
+}
