@@ -1,0 +1,41 @@
+name: Composite Draft Image
+
+on:
+  workflow_dispatch:
+    inputs:
+      background_url:
+        description: 'Background image URL'
+        required: true
+      draft_number:
+        description: 'Draft number (e.g. 128)'
+        required: true
+
+jobs:
+  composite:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run composite_post.py
+        run: |
+          python composite_post.py \
+            --background-url "${{ github.event.inputs.background_url }}" \
+            --output "pending/draft_${{ github.event.inputs.draft_number }}/image.png"
+
+      - name: Commit and push image
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "pending/draft_${{ github.event.inputs.draft_number }}/image.png"
+          git commit -m "Add composited image for draft_${{ github.event.inputs.draft_number }}" || echo "Nothing to commit"
+          git push origin main
