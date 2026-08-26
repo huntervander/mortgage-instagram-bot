@@ -1,0 +1,7 @@
+{
+  "content_type": "promotional",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_132/image.png",
+  "higgsfield_bg_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260826_230953_cf3d2529-8c99-4b7e-b1f8-abe40007bd57.png",
+  "generated_at": "2026-08-26T23:10:00Z",
+  "note": "AI background image was generated but CloudFront CDN was blocked by egress proxy policy. image.png was composited over a branded placeholder gradient. To composite over the real AI background, run: python composite_post.py --background-url <higgsfield_bg_url> --output pending/draft_132/image.png"
+}
