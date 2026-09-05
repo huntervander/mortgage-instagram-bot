@@ -1,0 +1,9 @@
+{
+  "content_type": "promotional",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_144/image.png",
+  "generated_at": "2026-09-05T13:07:00Z",
+  "higgsfield_job_id": "ac42ed13-f8b5-4f43-8dbd-16614a4476a7",
+  "higgsfield_image_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260905_130725_ac42ed13-f8b5-4f43-8dbd-16614a4476a7.png",
+  "image_status": "pending_composite",
+  "image_note": "CloudFront download blocked by org proxy policy (403). Run: python composite_post.py --background-url \"<higgsfield_image_url>\" --output pending/draft_144/image.png"
+}
