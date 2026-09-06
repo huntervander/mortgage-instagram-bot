@@ -1,0 +1,7 @@
+{
+  "content_type": "market_update",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_147/image.png",
+  "higgsfield_image_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260906_230750_05bf18d7-f363-4e6e-b66e-21e7a5f36904.png",
+  "generated_at": "2026-09-06T23:10:00Z",
+  "note": "Higgsfield background generated (nano_banana_pro, 1:1) but cloudfront.net blocked by egress policy; background reproduced locally with PIL matching Florida skyline/waterfront/gold trend-line theme."
+}
