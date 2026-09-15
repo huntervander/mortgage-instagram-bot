@@ -1,0 +1,7 @@
+{
+  "content_type": "promotional",
+  "raw_image_url": "https://raw.githubusercontent.com/huntervander/mortgage-instagram-bot/main/pending/draft_160/image.png",
+  "raw_higgsfield_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EfvrKsOBiXUO0oiNZNFezXLea0/hf_20260915_130709_bcc412f5-0069-4759-a985-270c89fecbb9.png",
+  "generated_at": "2026-09-15T13:07:09Z",
+  "image_status": "PENDING_COMPOSITE — egress policy blocks d8j0ntlcm91z4.cloudfront.net in cloud environment; run `python composite_post.py --background-url \"<raw_higgsfield_url>\" --output pending/draft_160/image.png` locally to complete"
+}
